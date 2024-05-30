@@ -52,9 +52,6 @@ WHERE MONTH(issue_date) = 11
  
 
 
-
-
-
 Avg DTI
 SELECT AVG(dti)*100 AS Avg_DTI FROM bank_loan_data
  
@@ -66,7 +63,6 @@ PMTD Avg DTI
 SELECT AVG(dti)*100 AS PMTD_Avg_DTI FROM bank_loan_data
 WHERE MONTH(issue_date) = 11
  
-
 
 GOOD LOAN ISSUED
 Good Loan Percentage
@@ -110,10 +106,6 @@ WHERE loan_status = 'Charged Off'
  
 
 
-
-
-
-
 LOAN STATUS
 	SELECT
         loan_status,
@@ -138,17 +130,6 @@ GROUP BY loan_status
  
 
 
-
-
-
-
-
-
-
-
-
-
-
 B.	BANK LOAN REPORT | OVERVIEW
 MONTH
 SELECT 
@@ -160,17 +141,6 @@ SELECT
 FROM bank_loan_data
 GROUP BY MONTH(issue_date), DATENAME(MONTH, issue_date)
 ORDER BY MONTH(issue_date)
- 
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -228,9 +198,6 @@ GROUP BY home_ownership
 ORDER BY home_ownership
  
 
-Note: We have applied multiple Filters on all the dashboards. You can check the results for the filters as well by modifying the query and comparing the results.
-For e.g
-See the results when we hit the Grade A in the filters for dashboards.
 SELECT 
 	purpose AS PURPOSE, 
 	COUNT(id) AS Total_Loan_Applications,
